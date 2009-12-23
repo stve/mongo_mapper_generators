@@ -13,7 +13,7 @@ begin
     gem.files = FileList["[A-Z]*", "{lib,rails_generators,test}/**/*"]
     
     gem.add_development_dependency "shoulda", ">= 2.10.2"
-    gem.add_development_dependency "cucumber", ">= 0"
+    gem.add_development_dependency "cucumber", ">= 0.4.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
