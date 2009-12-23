@@ -1,0 +1,15 @@
+development: &global_settings
+  database: databasename_development
+  host: 127.0.0.1
+  port: 27017
+
+test:
+  database: databasename_test
+  <<: *global_settings
+
+production:
+  host: hostname
+  database: databasename_production
+  username: username
+  password: password
+  <<: *global_settings

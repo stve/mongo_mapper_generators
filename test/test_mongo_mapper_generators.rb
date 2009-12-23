@@ -2,6 +2,15 @@ require 'helper'
 
 class TestMongoMapperGenerators < GeneratorTestCase
   
+  context "running the mongo_initializer generator" do
+    setup do
+      run_generator('mongo_initializer')
+    end
+    
+    should_generate_file 'config/initializers/mongodb.rb'
+    should_generate_file 'config/database.yml'
+  end
+  
   context "running the mongo_model generator" do
     setup do
       run_generator('mongo_model', %w(Person name:string email:string))
