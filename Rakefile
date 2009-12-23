@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "mongo_mapper_generators"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Generators for use with the MongoMapper rubygem}
+    gem.description = %Q{Generators for use with the MongoMapper rubygem.  Use to generate Documents, EmbeddedDocuments, and Rails initializer.}
     gem.email = "steve.agalloco@gmail.com"
     gem.homepage = "http://github.com/spagalloco/mongo_mapper_generators"
     gem.authors = ["Steve Agalloco"]
