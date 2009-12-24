@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), "..", "support", "generator_helper")
+
 class MongoModelGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
@@ -17,12 +19,4 @@ class MongoModelGenerator < Rails::Generator::NamedBase
         MongoAttribute.new(*attribute.split(":"))
       end    
     end
-end
-
-class MongoAttribute
-  attr_accessor :name, :type
-  
-  def initialize(name, type)
-    @name, @type = name, type.capitalize
-  end
 end
