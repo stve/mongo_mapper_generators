@@ -10,7 +10,7 @@ class Test::Unit::TestCase
     
     def should_not_generate_file(file)
       should "not generate file #{file}" do
-        assert !File.exists?("#{APP_ROOT}/#{file}"),"The file '#{file}' should not exist"
+        assert !File.exists?(file),"The file '#{file}' should not exist"
       end
     end
 
