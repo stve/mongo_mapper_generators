@@ -18,6 +18,7 @@ class TestMongoMapperGenerators < GeneratorTestCase
     
     should_generate_file 'app/models/person.rb'
     should_generate_file 'test/unit/person_test.rb'
+    should_generate_file 'test/factories/person.rb'
   end
 
   context "running the embedded_model generator" do
