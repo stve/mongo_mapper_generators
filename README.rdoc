@@ -1,6 +1,43 @@
 = mongo_mapper_generators
 
-Description goes here.
+MMG is intended for use with the MongoMapper rubygem.  Use it to generate Document and EmbeddedDocument models.  Also included is a generator for a rails initializer.
+
+Note: this gem is still in development and hasn't been published to gemcutter yet, it will be pushed soon.
+
+== Install
+
+MongoMapperGenerators is only released on gemcutter. To install, you can setup gemcutter as your default gem source.
+
+ $ gem install gemcutter
+ $ gem tumble
+ 
+Then you can install MMG:
+ 
+ $ gem install mongo_mapper_generators
+
+You can also just declare the source:
+
+ $ gem install mongo_mapper_generators -s http://gemcutter.org
+
+== Dependencies
+
+* MongoMapper
+* Rails
+
+== Usage
+
+Once you install the gem, the generators will be available to all Rails
+applications on your system. If you run script/generate without any
+additional arguments you should see the available generators listed.
+
+To run the generator, go to your rails project directory and call it
+using the script/generate or script/destroy command.
+
+  script/generate mongo_model Person name:string email:string age:integer
+  
+It will generate the model, a unit test and a factory.
+
+Generators also exist for generating EmbeddedDocument models as well as a rails initializer.
 
 == Note on Patches/Pull Requests
  
@@ -12,6 +49,15 @@ Description goes here.
   (if you want to have your own version, that is fine but
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
+
+== Credits
+
+I was inspired by a number of different sources, including:
+
+* Blitz - http://github.com/dancroak/blitz
+* NiftyGenerators - http://github.com/ryanb/nifty-generators
+* ShouldaGenerator - http://github.com/technicalpickles/shoulda_generator
+* John Nunemaker's rails initializer - http://gist.github.com/232953
 
 == Copyright
 
