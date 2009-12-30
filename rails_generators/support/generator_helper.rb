@@ -2,7 +2,18 @@ class MongoAttribute
   attr_accessor :name, :type
   
   def initialize(name, type)
-    @name, @type = name, type.capitalize
+    @name, @type = name, type
+  end
+  
+  def type
+    case @name
+    when 'many'
+      @type.tableize
+    when 'index', 'belongs_to'
+      @type.downcase
+    else
+      @type.capitalize
+    end
   end
   
   def default_for_factory

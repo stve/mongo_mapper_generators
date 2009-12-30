@@ -15,22 +15,22 @@ class TestMongoMapperGenerators < GeneratorTestCase
     
     context "with factories" do    
       setup do
-        run_generator('mongo_model', %w(Person name:string email:string many:addresses index:email))
+        run_generator('mongo_model', %w(Person name:string email:string many:addresses index:email belongs_to:corporation))
       end
     
       should_generate_file 'app/models/person.rb'
       should_generate_file 'test/unit/person_test.rb'
-      should_generate_file 'test/factories/person.rb'
+      should_generate_file 'test/factories/people.rb'
     end
     
     context "without factories" do
       setup do
-        run_generator('mongo_model', %w(Person name:string email:string many:addresses index:email --skip-factories))
+        run_generator('mongo_model', %w(Person name:string email:string many:addresses index:email belongs_to:corporation --skip-factories))
       end
     
       should_generate_file 'app/models/person.rb'
       should_generate_file 'test/unit/person_test.rb'
-      should_not_generate_file 'test/factories/person.rb'
+      should_not_generate_file 'test/factories/people.rb'
     end
   end
 

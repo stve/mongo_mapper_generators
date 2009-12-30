@@ -1,18 +1,31 @@
 class <%= class_name %>
   include MongoMapper::Document
 
+<% if attributes.any? -%>
 <% for attribute in attributes -%>
-<% if attribute.name != 'many' && attribute.name != 'index' -%>
   key :<%= attribute.name %>, <%= attribute.type %>
 <% end -%>
 <% end -%>
 
-<% attributes.select { |each| each.name == 'many' }.each do |each| -%>
-  many :<%= each.type.tableize %>
+<% if many.any? -%>
+<% many.each do |each| -%>
+  many :<%= each.type %>
+<% end -%>
 <% end -%>
 
-<% attributes.select { |each| each.name == 'index' }.each do |each| -%>
-  ensure_index :<%= each.type.downcase %>
+<% if belongs.any? -%>
+<% belongs.each do |each| -%>
+  belongs_to :<%= each.type %>
+<% end -%>
 <% end -%>
 
+<% if indexes.any? -%>
+<% indexes.each do |each| -%>
+  ensure_index :<%= each.type %>
+<% end -%>
+<% end -%>
+
+<% if timestamps -%>
+  timestamps!
+<% end -%>
 end
