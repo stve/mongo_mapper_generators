@@ -7,7 +7,7 @@ class TestMongoMapperGenerators < GeneratorTestCase
       run_generator('mongo_initializer')
     end
     
-    should_generate_file 'config/initializers/mongodb.rb'
+    should_generate_file 'config/initializers/mongomapper.rb'
     should_generate_file 'config/database.yml'
   end
   

@@ -10,9 +10,9 @@ class MongoInitializerGenerator < Rails::Generator::Base
     record do |m|
       m.directory 'config'
       m.directory 'config/initializers'
-
-      m.template 'database.yml', "config/database.yml"
-      m.template 'initializer.rb', "config/initializers/mongodb.rb"      
+      
+      m.file 'database.yml', "config/database.yml"      
+      m.template 'initializer.rb', "config/initializers/mongomapper.rb"
     end
   end
 end
