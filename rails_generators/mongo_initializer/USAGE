@@ -1,0 +1,14 @@
+Description:
+    Creates a database.yml file and a rails initializer for use with MongoMapper.
+
+Examples:
+    `./script/generate mongo_initializer`
+
+        creates an initializer:
+            Initializer:      config/initializers/mongomapper.rb
+			Config:			  config/database.yml
+			
+
+    `./script/generate mongo_initializer databasename`
+
+		generates the same files as above, and uses the databasename in the config file.
