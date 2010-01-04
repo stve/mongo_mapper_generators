@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "..", "support", "generator_helper")
 
 class MongoModelGenerator < Rails::Generator::NamedBase
-  attr_accessor :indexes, :belongs, :many, :timestamps
+  attr_accessor :indexes, :belongs, :many, :timestamps, :userstamps
   
   default_options :skip_factories  => false, :skip_timestamps => false
   
@@ -21,6 +21,7 @@ class MongoModelGenerator < Rails::Generator::NamedBase
     @many = parsed_attributes.select { |each| each.name == 'many' }
     @belongs = parsed_attributes.select { |each| each.name == 'belongs_to' }
     @timestamps = !options[:skip_timestamps]
+    @userstamps = !options[:skip_userstamps]
   end
   
   def manifest
@@ -57,6 +58,9 @@ class MongoModelGenerator < Rails::Generator::NamedBase
       }
       opt.on("--skip-timestamps", "Don't add timestamps to this model") { |v| 
         options[:skip_timestamps] = v 
+      }
+      opt.on("--skip-userstamps", "Don't add userstamps to this model") { |v| 
+        options[:skip_userstamps] = v 
       }
     end
 end

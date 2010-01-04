@@ -28,4 +28,8 @@ class <%= class_name %>
 <% if timestamps -%>
   timestamps!
 <% end -%>
+
+<% if userstamps -%>
+  userstamps!
+<% end -%>
 end
