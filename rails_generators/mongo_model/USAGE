@@ -3,7 +3,7 @@ Description:
     under_scored, and an optional list of attribute pairs as arguments.
 
     Attribute pairs are key_name:mongo_type arguments specifying the
-    model's attributes. Timestamps are added by default.
+    model's attributes. Timestamps and Userstamps are added by default.
 
 Examples:
     `./script/generate mongo_model account`
@@ -13,4 +13,12 @@ Examples:
 
     `./script/generate mongo_model post title:string body:string published:boolean`
 
-        creates a Post model with a string title, string body, and published flag.
+        creates a Post model with a string title, string body, published flag, timestamps! and userstamps!.
+
+    `./script/generate mongo_model post --skip-timestamps`
+
+        creates a Post model with no timestamps.
+
+    `./script/generate mongo_model post --skip-userstamps`
+
+        creates a Post model with no userstamps.
