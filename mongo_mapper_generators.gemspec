@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mongo_mapper_generators}
-  s.version = "0.1.0"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Steve Agalloco"]
-  s.date = %q{2009-12-22}
+  s.date = %q{2010-01-15}
   s.description = %q{Generators for use with the MongoMapper rubygem.  Use to generate Documents, EmbeddedDocuments, and Rails initializer.}
   s.email = %q{steve.agalloco@gmail.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "rails_generators/embedded_model/USAGE",
      "rails_generators/embedded_model/embedded_model_generator.rb",
      "rails_generators/embedded_model/templates/embedded_model.rb",
+     "rails_generators/embedded_model/templates/factory.rb",
      "rails_generators/embedded_model/templates/unit_test.rb",
      "rails_generators/mongo_initializer/USAGE",
      "rails_generators/mongo_initializer/mongo_initializer_generator.rb",
@@ -32,8 +33,10 @@ Gem::Specification.new do |s|
      "rails_generators/mongo_initializer/templates/initializer.rb",
      "rails_generators/mongo_model/USAGE",
      "rails_generators/mongo_model/mongo_model_generator.rb",
+     "rails_generators/mongo_model/templates/factory.rb",
      "rails_generators/mongo_model/templates/mongo_model.rb",
      "rails_generators/mongo_model/templates/unit_test.rb",
+     "rails_generators/support/generator_helper.rb",
      "test/fixtures/tmp/test.log",
      "test/helper.rb",
      "test/shoulda_macros/generator_macros.rb",
