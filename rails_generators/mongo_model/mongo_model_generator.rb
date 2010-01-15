@@ -29,8 +29,7 @@ class MongoModelGenerator < Rails::Generator::NamedBase
       m.template 'mongo_model.rb', "app/models/#{singular_name}.rb"
       
       m.directory 'test/unit'
-      m.template 'unit_test.rb',  File.join('test/unit', class_path, 
-                                            "#{singular_name}_test.rb")
+      m.template 'unit_test.rb',  File.join('test/unit', class_path, "#{singular_name}_test.rb")
 
       unless options[:skip_factories]
         m.directory 'test/factories'
