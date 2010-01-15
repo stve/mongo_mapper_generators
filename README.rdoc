@@ -2,8 +2,6 @@
 
 MMG is intended for use with the MongoMapper rubygem.  Use it to generate Document and EmbeddedDocument models.  Also included is a generator for a rails initializer.
 
-Note: this gem is still in development and hasn't been published to gemcutter yet, it will be pushed soon.
-
 == Install
 
 MongoMapperGenerators is only released on gemcutter. To install, you can setup gemcutter as your default gem source.
