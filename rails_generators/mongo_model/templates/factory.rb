@@ -1,5 +1,5 @@
 Factory.define :<%= file_name %> do |<%= file_name %>|
-<% for attribute in attributes -%>
+<% attributes.each do |attribute| -%>
   <%= factory_line(attribute, file_name) %>
 <% end -%>
 <% if timestamps %>

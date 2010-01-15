@@ -17,7 +17,6 @@ class MongoModelGenerator < Rails::Generator::NamedBase
     end
     
     @attributes = parsed_attributes.reject { |each| %w(index many belongs_to).include? each.name }
-    @indexes = parsed_attributes.select { |each| each.name == 'index' }
     @many = parsed_attributes.select { |each| each.name == 'many' }
     @belongs = parsed_attributes.select { |each| each.name == 'belongs_to' }
     @timestamps = !options[:skip_timestamps]
