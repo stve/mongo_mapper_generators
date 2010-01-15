@@ -1,7 +1,7 @@
 class <%= class_name %>
   include MongoMapper::EmbeddedDocument
 
-<% for attribute in attributes -%>
+<% attributes.each do |attribute| -%>
   key :<%= attribute.name %>, <%= attribute.type %>
 <% end -%>
 end
