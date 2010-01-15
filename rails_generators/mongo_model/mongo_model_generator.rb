@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "..", "support", "generator_helper")
 
 class MongoModelGenerator < Rails::Generator::NamedBase
-  attr_accessor :indexes, :belongs, :many, :timestamps, :userstamps
+  attr_accessor :belongs, :many, :timestamps, :userstamps
   
   default_options :skip_factories  => false, :skip_timestamps => false
   
@@ -16,7 +16,7 @@ class MongoModelGenerator < Rails::Generator::NamedBase
       end
     end
     
-    @attributes = parsed_attributes.reject { |each| %w(index many belongs_to).include? each.name }
+    @attributes = parsed_attributes.reject { |each| %w(many belongs_to).include? each.name }
     @many = parsed_attributes.select { |each| each.name == 'many' }
     @belongs = parsed_attributes.select { |each| each.name == 'belongs_to' }
     @timestamps = !options[:skip_timestamps]
@@ -46,7 +46,7 @@ class MongoModelGenerator < Rails::Generator::NamedBase
   protected
 
     def banner
-      "Usage: #{$0} #{spec.name} ModelName [field:type, field:type]"
+      "Usage: #{$0} #{spec.name} ModelName [field:type, field:type] --skip-factories --skip-timestamps --skip-userstamps"
     end
 
     def add_options!(opt)
