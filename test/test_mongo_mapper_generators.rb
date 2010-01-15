@@ -41,5 +41,6 @@ class TestMongoMapperGenerators < GeneratorTestCase
     
     should_generate_file 'app/models/address.rb'
     should_generate_file 'test/unit/address_test.rb'
+    should_generate_file 'test/factories/addresses.rb'
   end
 end
