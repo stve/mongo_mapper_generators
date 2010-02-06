@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mongo_mapper_generators}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Steve Agalloco"]
-  s.date = %q{2010-01-15}
+  s.date = %q{2010-02-05}
   s.description = %q{Generators for use with the MongoMapper rubygem.  Use to generate Documents, EmbeddedDocuments, and Rails initializer.}
   s.email = %q{steve.agalloco@gmail.com}
   s.extra_rdoc_files = [
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/mongo_mapper_generators.rb",
+     "lib/mongo_mapper_generators/version.rb",
      "rails_generators/embedded_model/USAGE",
      "rails_generators/embedded_model/embedded_model_generator.rb",
      "rails_generators/embedded_model/templates/embedded_model.rb",

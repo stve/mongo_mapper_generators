@@ -1,8 +1,12 @@
 require 'rubygems'
 require 'rake'
 
+$LOAD_PATH.unshift 'lib'
+
 begin
   require 'jeweler'
+  require 'mongo_mapper_generators/version'
+  
   Jeweler::Tasks.new do |gem|
     gem.name = "mongo_mapper_generators"
     gem.summary = %Q{Generators for use with the MongoMapper rubygem}
@@ -11,6 +15,7 @@ begin
     gem.homepage = "http://github.com/spagalloco/mongo_mapper_generators"
     gem.authors = ["Steve Agalloco"]
     gem.files = FileList["[A-Z]*", "{lib,rails_generators,test}/**/*"]
+    gem.version = MongoMapperGenerators::VERSION
     
     gem.add_development_dependency "shoulda", ">= 2.10.2"
     gem.add_development_dependency "cucumber", ">= 0.4.0"
