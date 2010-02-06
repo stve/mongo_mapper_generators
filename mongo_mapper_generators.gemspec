@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc",
      "Rakefile",
-     "VERSION",
      "lib/mongo_mapper_generators.rb",
      "lib/mongo_mapper_generators/version.rb",
      "rails_generators/embedded_model/USAGE",
