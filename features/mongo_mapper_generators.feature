@@ -2,7 +2,7 @@ Feature: Model generation
   In order to use the MongoMapper gem in a rails app
   I should be able to generate models using the MongoMapper Generators
 
-  # script/generate theme
+  # script/generate mongo_model
   Scenario: Generate a mongo model
     Given I have a new rails app
     And I have no models
@@ -10,7 +10,7 @@ Feature: Model generation
     Then I should have a model named "person.rb"
     And I should have a unit test named "person_test.rb"
     
-  # script/generate theme
+  # script/generate embedded_model
   Scenario: Generate an embedded mongo model
     Given I have a new rails app
     And I have no models
