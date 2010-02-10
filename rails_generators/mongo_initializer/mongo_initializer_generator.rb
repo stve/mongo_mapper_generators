@@ -11,7 +11,7 @@ class MongoInitializerGenerator < Rails::Generator::Base
       m.directory 'config'
       m.directory 'config/initializers'
       
-      m.file 'database.yml', "config/database.yml"      
+      m.file 'database.yml', "config/database.yml", :collision => :force
       m.template 'initializer.rb', "config/initializers/mongomapper.rb"
     end
   end
