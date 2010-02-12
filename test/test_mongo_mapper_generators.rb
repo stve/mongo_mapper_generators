@@ -8,7 +8,7 @@ class TestMongoMapperGenerators < GeneratorTestCase
     end
     
     should_generate_file 'config/initializers/mongomapper.rb'
-    should_generate_file 'config/database.yml'
+    should_generate_file 'config/mongodb.yml'
   end
   
   context "running the mongo_model generator" do
