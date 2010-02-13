@@ -1,4 +1,4 @@
-config = YAML.load_file(File.join(Rails.root,'config','database.yml'))[Rails.env]
+config = YAML.load_file(File.join(Rails.root,'config','mongodb.yml'))[Rails.env]
 
 MongoMapper.connection = Mongo::Connection.new(config['host'], config['port'], {
   :logger         => Rails.logger
